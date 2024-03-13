@@ -150,6 +150,11 @@ function fwd_school_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'fwd_school_theme_scripts' );
 
 /**
+ * register custom post types and custom taxonomies.
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
