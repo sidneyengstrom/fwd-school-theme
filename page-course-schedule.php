@@ -34,9 +34,9 @@ get_header();
 				echo"<h1>boy howdy</h1>";
 				if( have_rows( 'course_schedule' ) ) {
 					?>
-					<th style="text-align:left;"><strong>Date:</strong></th>
-					<th style="text-align:left;"><strong>Course:</strong></th>
-					<th style="text-align:left;"><strong>Instructor:</strong></th>
+					<th><strong>Date:</strong></th>
+					<th><strong>Course:</strong></th>
+					<th><strong>Instructor:</strong></th>
 					<?php
 
 					while( have_rows( 'course_schedule' ) ) :
