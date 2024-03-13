@@ -38,7 +38,7 @@ function fwd_register_custom_post_types() {
         'supports'           => array( 'title'),
     );
 
-    register_post_type( 'fwd-work', $args );
+    register_post_type( 'fwd-staff', $args );
 }
 
 
