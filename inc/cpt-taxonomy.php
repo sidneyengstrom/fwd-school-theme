@@ -39,6 +39,62 @@ function fwd_register_custom_post_types() {
     );
 
     register_post_type( 'fwd-staff', $args );
+
+
+ // Register Students
+ $labels = array(
+    'name'                  => _x( 'Students', 'post type general name' ),
+    'singular_name'         => _x( 'Student', 'post type singular name'),
+    'menu_name'             => _x( 'Student', 'admin menu' ),
+    'name_admin_bar'        => _x( 'Student', 'add new on admin bar' ),
+    'add_new'               => _x( 'Add New', 'student' ),
+    'add_new_item'          => __( 'Add student name' ),
+    'new_item'              => __( 'New Student' ),
+    'edit_item'             => __( 'Edit Student' ),
+    'view_item'             => __( 'View Student' ),
+    'all_items'             => __( 'All Students' ),
+    'search_items'          => __( 'Search Students' ),
+    'parent_item_colon'     => __( 'Parent Student:' ),
+    'not_found'             => __( 'No student found.' ),
+    'not_found_in_trash'    => __( 'No student found in Trash' ),
+);
+
+$args = array(
+    'labels'             => $labels,
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'show_in_nav_menus'  => true,
+    'show_in_admin_bar'  => true,
+    'show_in_rest'       => true,
+    'query_var'          => true,
+    'rewrite'            => array( 'slug' => 'student' ),
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => 5,
+    'menu_icon'          => 'dashicons-admin-users',
+    'supports'           => array( 'title'),
+    'template' => array(
+        
+        array( 
+            'core/paragraph', 
+            array(
+                'placeholder' => 'Add Bio...',
+            )
+        ),
+        array( 
+            'core/button', 
+            array(
+                'placeholder' => 'Portfolio',
+            )
+        ),
+    ),
+    'template_lock' => 'all'
+);
+
+register_post_type( 'fwd-students', $args );
 }
 
 
