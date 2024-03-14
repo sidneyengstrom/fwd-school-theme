@@ -39,6 +39,9 @@ function fwd_school_theme_setup() {
 		*/
 	add_theme_support( 'title-tag' );
 
+	// Student Portrait Size - 200px width, 300px height, hard crop
+	add_image_size( 'student-portrait', 200, 300, true );
+
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
