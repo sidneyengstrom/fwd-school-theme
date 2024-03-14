@@ -28,10 +28,7 @@ get_header();
 		<table>
 		<?php
 		if ( function_exists ( 'get_field' ) ) {
-			echo"<h1>boy howdy</h1>";
-
 			if( get_field( 'course_schedule' ) ) {
-				echo"<h1>boy howdy</h1>";
 				if( have_rows( 'course_schedule' ) ) {
 					?>
 					<th><strong>Date:</strong></th>
