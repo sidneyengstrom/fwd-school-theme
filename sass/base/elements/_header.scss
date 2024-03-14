@@ -2,7 +2,6 @@ header.site-header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: $color__background-screen;
-    color: #111;
     padding: 1rem 0.75rem;
     align-items: center;
     position: fixed;
