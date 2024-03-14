@@ -1,0 +1,20 @@
+footer.site-footer {
+    background-color: $color__background-screen;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem 3.5rem;
+
+    .site-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 600px) {
+    footer.site-footer {
+        padding: 1rem 0.5rem;
+        margin-bottom: -1.5rem;
+    }
+}
