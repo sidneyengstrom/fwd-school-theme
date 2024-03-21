@@ -42,6 +42,20 @@ function fwd_school_theme_setup() {
 	// Student Portrait Size - 200px width, 300px height, hard crop
 	add_image_size( 'student-portrait', 200, 300, true );
 
+	// add title placeholder changed to student name
+	function custom_change_default_title( $title ){
+		$screen = get_current_screen();
+		if  ( 'fwd-students' == $screen->post_type ) {
+			$title = 'Add student name';
+		}
+		if  ( 'fwd-staff' == $screen->post_type ) {
+			$title = 'Add staff name';
+		}
+		return $title;
+	}
+	add_filter( 'enter_title_here', 'custom_change_default_title' );
+	
+
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
