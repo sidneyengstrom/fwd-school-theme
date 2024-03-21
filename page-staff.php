@@ -19,9 +19,7 @@ get_header();
         echo '<h1>';
         echo the_title();
         echo '</h1>';
-        echo '<p>';
-        echo the_content();
-        echo '</p>';
+        echo '<p class="staff-excerpt">Our dedicated staff is here to help our students succeed. You will find the faculty and administrative staff listed below. Please contact the appropriate individual with any questions. Vestibulum pretium neque leo, nec euismod ex interdum vitae. Etiam viverra, lorem sed lobortis mattis, lectus enim eleifend nisi, non dapibus nulla purus malesuada risus. Donec consectetur neque turpis, vitae varius lectus commodo vel.</p>';
         ?>
 
     <div id="staff">
