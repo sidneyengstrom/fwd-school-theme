@@ -39,9 +39,7 @@ function fwd_school_theme_setup() {
 		*/
 	add_theme_support( 'title-tag' );
 
-	// Student Portrait Size - 200px width, 300px height, hard crop
-	add_image_size( 'student-portrait', 200, 300, true );
-
+	
 	// add title placeholder changed to student name
 	function custom_change_default_title( $title ){
 		$screen = get_current_screen();
@@ -55,13 +53,15 @@ function fwd_school_theme_setup() {
 	}
 	add_filter( 'enter_title_here', 'custom_change_default_title' );
 	
-
+	
 	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
+	* Enable support for Post Thumbnails on posts and pages.
+	*
+	* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	*/
 	add_theme_support( 'post-thumbnails' );
+	// Student Portrait Size - 200px width, 300px height, hard crop
+	add_image_size( 'student-portrait', 300, 200, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
