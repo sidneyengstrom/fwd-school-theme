@@ -41,7 +41,8 @@ get_header();
                 ?>
                         <div class="col-md-4">
                             <a href="<?php the_permalink(); ?>" class="latest-news-item">
-                                <div class="latest-news-thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+                                <div class="latest-news-thumbnail"><?php the_post_thumbnail('student-portrait'); ?>
+								</div>
                                     <div class="overlay"></div>
                                     <h3 class="latest-news-title"><?php the_title(); ?></h3>
                                 </div>
