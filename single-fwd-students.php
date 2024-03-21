@@ -26,8 +26,7 @@ get_header();
                         <?php endif; ?>
                     </div>
                     <div class="related-students">
-                        <h2>Related Students</h2>
-                        <ul>
+                        <h2>Meet Other Designer Students:</h2>
                             <?php
                             $terms = get_the_terms(get_the_ID(), 'fwd-student-category');
                             if ($terms && !is_wp_error($terms)) {
@@ -48,14 +47,13 @@ get_header();
                                     while ($related_students->have_posts()) {
                                         $related_students->the_post();
                             ?>
-                                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             <?php
                                     }
                                     wp_reset_postdata();
                                 }
                             }
                             ?>
-                        </ul>
                     </div>
                 </div><!-- .entry-content -->
             </article><!-- #post-<?php the_ID(); ?> -->
