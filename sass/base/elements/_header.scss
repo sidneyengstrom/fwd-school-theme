@@ -76,4 +76,36 @@ header.site-header {
         grid-template-columns: 1fr 4fr;
         position: static;
     }
+
 }
+
+@media(min-width: 1000px) {
+    header.site-header {
+        grid-template-columns: 0.5fr 2fr 4fr 0.5fr;
+        .site-branding {
+            grid-column: 2/3;
+            padding-left: 1rem;
+        }
+
+        nav.main-navigation {
+            grid-column: 3/4;
+            justify-self: end;
+            padding-right: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    header.site-header {
+        grid-template-columns: 2fr 2fr 4fr 2fr;
+
+        .site-branding {
+            padding-left: 0;
+        }
+
+        nav.main-navigation {
+            padding-right: 0;
+        }
+    }
+}
+
