@@ -53,7 +53,9 @@ function fwd_school_theme_setup() {
 	}
 	add_filter( 'enter_title_here', 'custom_change_default_title' );
 	
-	
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'align-full' );
+
 	/*
 	* Enable support for Post Thumbnails on posts and pages.
 	*
@@ -62,7 +64,6 @@ function fwd_school_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// Student Portrait Size - 200px width, 300px height, hard crop
 	add_image_size( 'student-portrait', 300, 200, true );
-
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
