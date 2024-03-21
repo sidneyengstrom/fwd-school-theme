@@ -9,6 +9,21 @@ header.site-header {
     left: 0;
     right: 0;
     font-family: $font__header;
+    z-index: 999;
+
+    a {
+        color: $color__nav-link;
+
+        &:visited {
+            color: $color__nav-link-visited;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color__nav-link-hover;
+        }
+    }
 
     nav.main-navigation {
         width: fit-content;
@@ -16,19 +31,19 @@ header.site-header {
 
         button.menu-toggle {
             background-color: #00000000;
-            color: $color__link;
+            color: $color__nav-link;
             font-weight: bold;
             border: 0;
             padding: 0;
             text-align: right;
     
             &:hover {
-                color: $color__link-hover;
+                color: $color__nav-link-hover;
                 cursor: pointer;
             }
 
             &:visited {
-                color: $color__link-visited;
+                color: $color__nav-link-visited;
             }
         }
 
