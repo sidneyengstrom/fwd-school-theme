@@ -38,6 +38,8 @@ get_header();
                             'terms' => $term->slug,
                         ),
                     ),
+                    'order' => 'ASC',
+                    'orderby' => 'title',
                 );
 
                 $query = new WP_Query( $args );
