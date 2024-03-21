@@ -141,10 +141,28 @@ function fwd_school_theme_scripts() {
 	wp_enqueue_style( 'fwd-school-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'fwd-school-theme-style', 'rtl', 'replace' );
 
+
 	wp_enqueue_script( 'fwd-school-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if( get_post_type() === 'post' ) {
+		wp_enqueue_style ( 
+			'aos-styles',
+			get_template_directory_uri() . '/styles/aos.css',
+			array(), 
+			'1.0'
+		);
+
+		wp_enqueue_script(
+			'aos-scripts',
+			get_template_directory_uri() . '/js/aos.js',
+			array(),
+			'1.0',
+			array( 'strategy' => 'defer' )
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'fwd_school_theme_scripts' );
