@@ -25,6 +25,9 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fwd-school-theme' ), 'fwd-school-theme', '<a href="https://sidney-engstrom.com/school-site">Sidney Engstrom, Braden Murao</a>' );
 				?>
 		</div><!-- .site-info -->
+		<div class="footer-menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
