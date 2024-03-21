@@ -199,3 +199,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function fwd_excerpt_length( $length ) {
+	return 20;
+}
+
+add_filter( 'excerpt_length', 'fwd_excerpt_length', 999 );
+
+function fwd_excerpt_more( $more ) {
+	$more = '... <a href="'. esc_url( get_permalink() ) .'">Keep Reading</a>';
+	return $more;
+}
+add_filter( 'excerpt_more', 'fwd_excerpt_more' );
