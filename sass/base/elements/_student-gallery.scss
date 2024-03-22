@@ -1,0 +1,27 @@
+.page-id-53 {
+    #students {
+        display: grid;
+        justify-content: center;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (min-width: 900px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .entry-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 300px;
+
+            .read-more {
+                display: block;
+            }
+        }
+        
+    }
+}
