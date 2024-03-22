@@ -50,6 +50,7 @@ get_header();
                 if ( $query->have_posts() ) {
                     echo '<div id="' . esc_attr( $term->slug ) . '">';
                     echo '<h2 class="staff-category-heading">' . esc_html( $term->name ) . '</h2>';
+                    echo '<div class="staff-category-wrapper">';
                     while ( $query->have_posts() ) {
                         $query->the_post();
                         ?>
@@ -72,6 +73,7 @@ get_header();
                         </div>
                         <?php
                     }
+                    echo '</div>';
                     echo '</div>';
                     wp_reset_postdata();
                 }
