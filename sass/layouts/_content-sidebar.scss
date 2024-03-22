@@ -35,6 +35,13 @@
 		}
 	}
 
+	@media (min-width: 1850px) {
+		grid-template-columns: repeat(4, 3fr);
+		main.site-main, aside#secondary {
+			padding: 1rem 1rem;
+		}
+	}
+
 	
 }
 
@@ -69,6 +76,10 @@ body.blog {
 			main.site-main, aside#secondary {
 				padding: 1rem 1rem;
 			}
+		}
+
+		@media (min-width: 1850px) {
+			grid-template-columns: repeat(4, 3fr);
 		}
 	}
 
