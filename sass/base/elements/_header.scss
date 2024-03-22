@@ -133,9 +133,10 @@ header.site-header {
     }
 
     .site-branding {
-
         .site-title {
             margin: 0;
+            font-weight: bold;
+            font-family: $font__main;
         }
     }
 
