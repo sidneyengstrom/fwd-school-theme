@@ -8,6 +8,22 @@ header.site-header {
     bottom: 0;
     left: 0;
     right: 0;
+    font-family: $font__header;
+    z-index: 999;
+
+    a {
+        color: $color__nav-link;
+
+        &:visited {
+            color: $color__nav-link-visited;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color__nav-link-hover;
+        }
+    }
 
     nav.main-navigation {
         width: fit-content;
@@ -15,19 +31,19 @@ header.site-header {
 
         button.menu-toggle {
             background-color: #00000000;
-            color: $color__link;
+            color: $color__nav-link;
             font-weight: bold;
             border: 0;
             padding: 0;
             text-align: right;
     
             &:hover {
-                color: $color__link-hover;
+                color: $color__nav-link-hover;
                 cursor: pointer;
             }
 
             &:visited {
-                color: $color__link-visited;
+                color: $color__nav-link-visited;
             }
         }
 
@@ -60,4 +76,36 @@ header.site-header {
         grid-template-columns: 1fr 4fr;
         position: static;
     }
+
 }
+
+@media(min-width: 1000px) {
+    header.site-header {
+        grid-template-columns: 0.5fr 2fr 4fr 0.5fr;
+        .site-branding {
+            grid-column: 2/3;
+            padding-left: 1rem;
+        }
+
+        nav.main-navigation {
+            grid-column: 3/4;
+            justify-self: end;
+            padding-right: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    header.site-header {
+        grid-template-columns: 2fr 2fr 4fr 2fr;
+
+        .site-branding {
+            padding-left: 0;
+        }
+
+        nav.main-navigation {
+            padding-right: 0;
+        }
+    }
+}
+
