@@ -78,7 +78,7 @@ header.site-header {
 
     }
 
-    //toggled menu
+    //menu toggled
     .main-navigation.toggled {
         text-align: right;
         .menu-dropdown {
@@ -154,12 +154,12 @@ header.site-header {
         
     }
 
-    @media(min-width: 600px) {
+    @media(min-width: $screen-break__med) {
         grid-template-columns: 1fr 4fr;
         position: static !important;
     }
 
-    @media(min-width: 1000px) {
+    @media(min-width: $screen-break__med-lg) {
         grid-template-columns: 0.5fr 2fr 4fr 0.5fr;
 
         .site-branding {
@@ -174,7 +174,7 @@ header.site-header {
         }
     }
 
-    @media (min-width: 1400px) {
+    @media (min-width: $screen-break__lg) {
         grid-template-columns: 2fr 2fr 4fr 2fr;
     
         .site-branding {
@@ -186,7 +186,7 @@ header.site-header {
         }
     }
 
-    @media (min-width: 1850px) {
+    @media (min-width: $screen-break__xl) {
         grid-template-columns: 3fr 2fr 4fr 3fr;
     }
 }
