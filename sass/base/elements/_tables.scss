@@ -1,4 +1,16 @@
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
-}
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  th, td {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
