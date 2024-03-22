@@ -15,18 +15,17 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+    <?php
+    while (have_posts()) :
+        the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+        get_template_part('template-parts/content', 'page');
 
-
-		endwhile; // End of the loop.
-		?>
-		 <section class="latest-news">
+    endwhile; // End of the loop.
+    ?>
+    <section class="latest-news">
         <div class="container">
             <h2>News</h2>
             <div class="row">
@@ -41,11 +40,9 @@ get_header();
                 ?>
                         <div class="col-md-4">
                             <a href="<?php the_permalink(); ?>" class="latest-news-item">
-                                <div class="latest-news-thumbnail"><?php the_post_thumbnail('student-portrait'); ?>
-								</div>
-                                    <div class="overlay"></div>
-                                    <h3 class="latest-news-title"><?php the_title(); ?></h3>
-                                </div>
+                                <div class="latest-news-thumbnail"><?php the_post_thumbnail('student-portrait'); ?></div>
+                                <div class="overlay"></div>
+                                <h3 class="latest-news-title"><?php the_title(); ?></h3>
                             </a>
                         </div>
                 <?php
@@ -56,8 +53,8 @@ get_header();
             </div><!-- .row -->
         </div><!-- .container -->
     </section><!-- .latest-news -->
-
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_footer();
+?>
