@@ -12,6 +12,7 @@ header.site-header {
     z-index: 999;
     height: 4rem;
 
+    
     .menu-bar {
         @include menu-bar;
         display: block;
@@ -34,6 +35,44 @@ header.site-header {
 
         &::after {
             top: 7px;
+        }
+    }
+    .main-navigation.toggled {
+        text-align: right;
+        .menu-dropdown {
+            position: absolute;
+            right: 0;
+            bottom: 4rem;
+            padding: 1rem 3rem 1rem 0;;
+            text-align: right;
+            background-color: #111;
+            width: 100%;
+
+            a {
+                width: fit-content;
+            }
+        }
+
+        .menu-bar {
+            background-color: #111;
+
+            &::before {
+                transform: rotate(45deg);
+                background-color: white;
+                bottom: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                background-color: white;
+                top: 0;
+            }
+        }
+
+        .main-navigation ul ul.sub-menu {
+            background: linear-gradient(to bottom, #111, #111111ee);
+            padding: 1rem 0;
+            box-shadow: none;
         }
     }
     a {
