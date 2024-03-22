@@ -1,0 +1,12 @@
+.page-id-51 {
+    .staff-category-wrapper {
+        display: grid;
+        justify-content: center;
+
+        @media (min-width: 800px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+    }
+}
