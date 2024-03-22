@@ -1,0 +1,23 @@
+.site {
+    footer.entry-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        @media(min-width: 450px) {
+            display: grid;
+            grid-template-columns: repeat(2, 175px);
+        }
+
+        @media (min-width: 600px) {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        @media(min-width: 850px) {
+            gap: 2rem;
+        }
+    }
+}
+    
