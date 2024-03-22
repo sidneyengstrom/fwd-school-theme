@@ -56,6 +56,24 @@ function fwd_school_theme_setup() {
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'align-full' );
 
+	//customizer section and setting for footer img
+function school_theme_customize_footer( $wp_customize ) {
+    $wp_customize->add_section( 'footer_img_section' , array(
+        'title'      => __( 'Footer Image', 'school-theme' ),
+        'priority'   => 100,
+    ) );
+    $wp_customize->add_setting( 'footer_img' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_img', array(
+        'label'      => __( 'Upload a footer image', 'school-theme' ),
+        'section'    => 'footer_img_section',
+        'settings'   => 'footer_img',
+    ) ) );
+}
+add_action( 'customize_register', 'school_theme_customize_footer' );
+
 	/*
 	* Enable support for Post Thumbnails on posts and pages.
 	*
