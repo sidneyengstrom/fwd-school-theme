@@ -1,0 +1,18 @@
+body.home {
+    .latest-news .container {
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+
+            .latest-news-title {
+                margin-top: 0.5rem;
+
+            }
+        }
+    }
+
+    .wp-block-img.size-full {
+        grid-column: 1/5;
+    }
+}
