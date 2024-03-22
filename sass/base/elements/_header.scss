@@ -12,6 +12,30 @@ header.site-header {
     z-index: 999;
     height: 4rem;
 
+    .menu-bar {
+        @include menu-bar;
+        display: block;
+        position: relative;
+        transition: background-color 0.3s ease;
+    
+        &::before, &::after {
+            @include menu-bar;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 7px;
+            transition: transform 0.5s ease;
+        }
+
+        &::before {
+            bottom: 7px;
+        }
+
+        &::after {
+            top: 7px;
+        }
+    }
     a {
         color: $color__nav-link;
 
