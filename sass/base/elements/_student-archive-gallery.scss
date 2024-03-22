@@ -1,0 +1,83 @@
+.tax-fwd-student-category {
+    .site-main {
+        display: grid;
+        justify-content: center;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "title"
+        "student1"
+        "student2"
+        "student3"
+        "footer";
+
+        header.page-header {
+            grid-area: header;
+        }
+
+        h1.page-title {
+            grid-area: title;
+        }
+        
+
+        article.fwd-students:first-of-type {
+            grid-area: student1;
+        }
+
+        article.fwd-students:nth-of-type(2) {
+            grid-area: student2;
+        }
+
+        article.fwd-students:nth-of-type(3) {
+            grid-area: student3;
+        }
+
+        article.fwd-students {
+            @media(min-width: 600px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                margin-bottom: 1rem;
+                
+                .entry-title {
+                    margin: 0;
+                }
+
+                .entry-content {
+                    padding-left: 1rem;
+                    a {
+                        width: fit-content;
+                        padding: 1rem;
+                        border-radius: 3rem;
+                        display: block;
+                        background-color: #111;
+                        color: $color__nav-link;
+                        margin-top: 1.5rem;
+
+                        &:visited {
+                            color: $color__nav-link-visited;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background-color: #111111dd;
+                            color: $color__nav-link-hover;
+                        }
+                    }
+                }
+
+                .post-thumbnail {
+                    grid-column: 1/2;
+                }
+            }
+            
+        }
+
+        footer.page-footer {
+            grid-area: footer;
+        }
+        
+    }
+}
