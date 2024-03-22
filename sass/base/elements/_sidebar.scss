@@ -1,0 +1,53 @@
+aside {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside section {
+    width: 20%;
+}
+
+aside h2 {
+    font-size: 1.25em;
+}
+
+aside a {
+    font-weight: bold;
+}
+
+aside ul {
+    margin: 0;
+}
+
+aside form {
+    padding-top: 1.2em;
+}
+
+.wp-block-search__label {
+    display: none;
+}
+.wp-block-search__inside-wrapper {
+    flex-wrap: wrap;
+}
+
+.wp-block-search__input {
+    width: 100%;
+}
+
+.wp-block-search__button {
+    background-color: rgb(41, 81, 240);
+    color: white;
+    width: 100%;
+    margin: 5px 0;
+}
+
+@media(max-width: 795px) {
+    aside {
+        display: block
+    }
+
+    aside section {
+        width: 100%;
+    }
+
+}
