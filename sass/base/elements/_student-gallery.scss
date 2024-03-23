@@ -3,7 +3,7 @@
         display: grid;
         justify-content: center;
 
-        @media (min-width: 600px) {
+        @media (min-width: $screen-break__med-lg) {
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
