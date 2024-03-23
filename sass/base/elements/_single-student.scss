@@ -1,0 +1,57 @@
+.single-student-info {
+    width: 100%;
+    margin-right:0 ;
+    text-align: center;
+
+    a:visited {
+        color: #f2f2f2;
+    }
+}
+
+.student-thumbnail {
+    width: 100%;
+    margin-left:0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.related-students {
+    a {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+@media(min-width: 1000px) {
+    
+.single-student-entry-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-student-header {
+    width: 100%;
+    justify-content: flex-end;
+
+    h2 {
+        font-size: 3em;
+        font-weight: normal;
+    }
+}
+
+.single-student-info {
+    width: 55%;
+    margin-right:2.5% ;
+    text-align: start;
+
+    a:visited {
+        color: #f2f2f2;
+    }
+}
+
+.student-thumbnail {
+    width: 35%;
+    margin-left: 2.5%;
+}
+
+}
