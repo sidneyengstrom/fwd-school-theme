@@ -1,3 +1,4 @@
+// general layout
 .site {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -9,16 +10,14 @@
 
 	main.site-main, aside#secondary {
 		padding: 1rem;
-	}
 
-	@media (min-width: 520px) {
-		main.site-main, aside#secondary {
+		@media (min-width: 520px) {
 			padding: 1rem 2rem;
 		}
 	}
 
-	@media (min-width: 1000px) {
-		grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+	@media (min-width: $screen-break__med-lg) {
+		@include med-lg-col;
 		.site-header, .site-footer {
 			grid-column: 1/5;
 		}
@@ -28,15 +27,15 @@
 		}
 	}
 
-	@media (min-width: 1400px) {
-		grid-template-columns: 2fr 3fr 3fr 2fr;
+	@media (min-width: $screen-break__lg) {
+		@include lg-col;
 		main.site-main, aside#secondary {
 			padding: 1rem 1rem;
 		}
 	}
 
-	@media (min-width: 1850px) {
-		grid-template-columns: repeat(4, 3fr);
+	@media (min-width: $screen-break__xl) {
+		@include xl-col;
 		main.site-main, aside#secondary {
 			padding: 1rem 1rem;
 		}
@@ -45,6 +44,7 @@
 	
 }
 
+// blog spec layout
 body.blog {
 	.site {
 		grid-template-columns: auto;
@@ -53,15 +53,9 @@ body.blog {
 		"main main"
 		"sidebar sidebar"
 		"footer footer";
-
-		@media (min-width: 520px) {
-			main.site-main, aside#secondary {
-				padding: 1rem 2rem;
-			}
-		}
 	
-		@media (min-width: 1000px) {
-			grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+		@media (min-width: $screen-break__med-lg) {
+			@include med-lg-col;
 			.site-header, .site-footer {
 				grid-column: 1/5;
 			}
@@ -71,15 +65,15 @@ body.blog {
 			}
 		}
 	
-		@media (min-width: 1400px) {
-			grid-template-columns: 2fr 3fr 3fr 2fr;
+		@media (min-width: $screen-break__lg) {
+			@include lg-col;
 			main.site-main, aside#secondary {
 				padding: 1rem 1rem;
 			}
 		}
 
-		@media (min-width: 1850px) {
-			grid-template-columns: repeat(4, 3fr);
+		@media (min-width: $screen-break__xl) {
+			@include xl-col;
 		}
 	}
 
@@ -102,7 +96,5 @@ body.blog {
 .site-footer {
 	grid-area: footer;
 }
-
-
 
 @import "no-sidebar";

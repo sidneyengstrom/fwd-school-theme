@@ -2,12 +2,16 @@ body.home {
     .latest-news .container {
         .row {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
             gap: 1.5rem;
 
             .latest-news-title {
                 margin-top: 0.5rem;
+            }
 
+            @media(min-width: 669px) {
+                flex-direction: row;
             }
         }
     }
