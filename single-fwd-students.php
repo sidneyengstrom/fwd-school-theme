@@ -13,18 +13,18 @@ get_header();
         ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <div class="entry-content">
-                    <div class="student-info">
+                <div class="single-student-entry-content">
+                    <div class="single-student-header">
                         <h2><?php echo esc_html(get_the_title()); ?></h2>
-                        <div class="student-content">
-                            <?php the_content(); ?>
-                        </div>
-                        <?php if (has_post_thumbnail()) : ?>
-                            <div class="student-thumbnail">
-                                <?php the_post_thumbnail('medium'); ?>
-                            </div>
-                        <?php endif; ?>
                     </div>
+                    <div class="single-student-info">
+                            <?php the_content(); ?>
+                    </div>
+                    <?php if (has_post_thumbnail()) : ?>
+                    <div class="student-thumbnail">
+                            <?php the_post_thumbnail('medium'); ?>
+                    </div>
+                    <?php endif; ?>
                     <div class="related-students">
                         <h2>Meet Other Designer Students:</h2>
                             <?php
@@ -47,7 +47,7 @@ get_header();
                                     while ($related_students->have_posts()) {
                                         $related_students->the_post();
                             ?>
-                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
                             <?php
                                     }
                                     wp_reset_postdata();
@@ -55,6 +55,7 @@ get_header();
                             }
                             ?>
                     </div>
+                    
                 </div><!-- .entry-content -->
             </article><!-- #post-<?php the_ID(); ?> -->
         <?php
