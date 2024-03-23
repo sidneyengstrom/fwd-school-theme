@@ -43,10 +43,8 @@ footer.site-footer {
             color: $color__nav-link-hover;
         }
     }
-}
 
-@media (min-width: 600px) {
-    footer.site-footer {
+    @media (min-width: $screen-break__med) {
         padding: 1rem 0.5rem;
         margin-bottom: -1.5rem;
         display: flex;
@@ -56,7 +54,12 @@ footer.site-footer {
         .site-info {
             margin-bottom: 0;
         }
-    }
 
-    
+        #menu-footer {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
 }
+
